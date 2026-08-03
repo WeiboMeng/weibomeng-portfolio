@@ -583,7 +583,14 @@ footer p {
 
     }
 
+    
+    .skills-container {
+        
+    grid-template-columns: repeat(2, 1fr);
 
+    }
+
+    
     h1 {
 
         font-size: 2.8rem;
@@ -608,6 +615,13 @@ footer p {
     .container {
 
         width: 92%;
+
+    }    
+
+
+    .skills-container {
+
+    grid-template-columns:1fr;
 
     }
 
@@ -662,7 +676,7 @@ footer p {
 
     }
 
-
+    
     .btn {
 
         width: 100%;
@@ -718,3 +732,73 @@ a:focus {
 
 }
 
+
+/*
+========================================
+16. Skills Section
+========================================
+*/
+
+
+.skills-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 3rem;
+
+}
+
+
+.skill-group {
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 2rem;
+
+    text-align: center;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+}
+
+
+.skill-group:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+
+.skill-group h3 {
+
+    font-size: 1.25rem;
+
+    margin-bottom: 1rem;
+
+    color: #111827;
+
+}
+
+
+.skill-group p {
+
+    max-width: none;
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #4b5563;
+
+}
