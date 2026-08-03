@@ -1,35 +1,20 @@
-/* =========================
-   Global Reset
-========================= */
+/*
+========================================
+1. Global Reset
+========================================
+*/
+
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
-}
-
-
-/* =========================
-   Root Variables
-========================= */
-
-:root {
-
-    --primary-color: #2563eb;
-    --text-color: #1f2937;
-    --secondary-text: #6b7280;
-    --background-color: #ffffff;
-    --section-background: #f8fafc;
-    --border-color: #e5e7eb;
-
-    --container-width: 1100px;
 
 }
 
-
-/* =========================
-   Base Styles
-========================= */
 
 html {
 
@@ -37,143 +22,94 @@ html {
 
 }
 
+
 body {
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
 
-    color: var(--text-color);
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
-    background: var(--background-color);
+    background-color: #ffffff;
+
+    color: #1f2937;
 
     line-height: 1.6;
 
 }
 
 
-/* =========================
-   Layout
-========================= */
+/*
+========================================
+2. Typography
+========================================
+*/
 
-section {
 
-    padding: 100px 20px;
+h1,
+h2,
+h3 {
 
-}
+    font-weight: 700;
 
-.container {
-
-    width: 100%;
-
-    max-width: var(--container-width);
-
-    margin: 0 auto;
+    color: #111827;
 
 }
 
-
-/* =========================
-   Typography
-========================= */
 
 h1 {
 
-    font-size: 3rem;
+    font-size: 3.5rem;
 
-    margin-bottom: 20px;
+    line-height: 1.2;
 
 }
+
 
 h2 {
 
-    font-size: 2rem;
+    font-size: 2.2rem;
 
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 
 }
+
 
 p {
 
-    color: var(--secondary-text);
-
     font-size: 1rem;
 
-}
-
-
-/* =========================
-   Section Titles
-========================= */
-
-section h2 {
-
-    margin-bottom: 24px;
-
-    text-align: center;
+    color: #4b5563;
 
 }
 
-section p {
 
-    max-width: 720px;
+/*
+========================================
+3. Container
+========================================
+*/
+
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
 
     margin: 0 auto;
 
-    text-align: center;
-
 }
 
 
-/* =========================
-   Links
-========================= */
+/*
+========================================
+4. Header / Navigation
+========================================
+*/
 
-a {
-
-    text-decoration: none;
-
-    color: inherit;
-
-}
-
-
-ul {
-
-    list-style: none;
-
-}
-
-
-/* =========================
-   Images
-========================= */
-
-img {
-
-    display: block;
-
-    max-width: 100%;
-
-}
-
-
-/* =========================
-   Buttons (Reserved)
-========================= */
-
-.btn {
-
-    display: inline-block;
-
-    padding: 12px 24px;
-
-    border-radius: 8px;
-
-}
-
-
-/* =========================
-   Header
-========================= */
 
 header {
 
@@ -181,39 +117,39 @@ header {
 
     top: 0;
 
-    background: #ffffff;
-
-    border-bottom: 1px solid var(--border-color);
-
     z-index: 1000;
+
+    background-color: rgba(255,255,255,0.95);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #e5e7eb;
 
 }
 
 
-/* =========================
-   Navigation
-========================= */
-
 .navbar {
 
-    height: 72px;
+    height: 80px;
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+
+    justify-content: space-between;
 
 }
 
 
 .logo {
 
-    font-size: 1.4rem;
+    text-decoration: none;
 
-    font-weight: bold;
+    font-size: 1.5rem;
 
-    color: var(--text-color);
+    font-weight: 700;
+
+    color: #111827;
 
 }
 
@@ -222,65 +158,86 @@ header {
 
     display: flex;
 
-    gap: 32px;
+    list-style: none;
+
+    gap: 2rem;
 
 }
 
 
 .nav-links a {
 
+    text-decoration: none;
+
+    color: #374151;
+
     font-size: 1rem;
 
-    color: var(--text-color);
+    font-weight: 500;
 
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 
 }
 
 
 .nav-links a:hover {
 
-    color: var(--primary-color);
+    color: #2563eb;
 
 }
 
 
-/* =========================
-   Hero Section
-========================= */
+/*
+========================================
+5. Hero Section
+========================================
+*/
+
 
 .hero {
 
-    min-height: calc(100vh - 72px);
+    min-height: calc(100vh - 80px);
 
     display: flex;
 
     align-items: center;
+
+    padding: 5rem 0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #ffffff
+        );
 
 }
 
 
 .hero-content {
 
-    max-width: 720px;
+    max-width: 850px;
 
 }
 
 
 .hero-intro {
 
-    color: var(--primary-color);
+    font-size: 1.2rem;
 
-    font-weight: bold;
+    color: #2563eb;
 
-    margin-bottom: 12px;
+    font-weight: 600;
+
+    margin-bottom: 1rem;
 
 }
 
 
 .hero h1 {
 
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 
 }
 
@@ -289,115 +246,475 @@ header {
 
     font-size: 1.5rem;
 
-    color: var(--secondary-text);
+    font-weight: 500;
 
-    margin-bottom: 28px;
+    color: #374151;
+
+    margin-bottom: 1.5rem;
 
 }
 
 
 .hero-description {
 
+    max-width: 720px;
+
     font-size: 1.1rem;
 
-    line-height: 1.8;
-
-    margin-bottom: 40px;
-
-    max-width: 680px;
+    margin-bottom: 2.5rem;
 
 }
+
+
+/*
+========================================
+6. Buttons
+========================================
+*/
 
 
 .hero-buttons {
 
     display: flex;
 
-    gap: 16px;
+    gap: 1rem;
 
 }
 
 
-/* =========================
-   Buttons
-========================= */
-
 .btn {
 
-    padding: 14px 28px;
+    display: inline-block;
+
+    padding: 0.85rem 1.8rem;
 
     border-radius: 8px;
 
+    text-decoration: none;
+
     font-weight: 600;
 
-    transition: all 0.2s ease;
+    transition:
+
+        transform 0.3s ease,
+
+        box-shadow 0.3s ease,
+
+        background-color 0.3s ease;
+
+}
+
+
+.btn:hover {
+
+    transform: translateY(-3px);
 
 }
 
 
 .btn-primary {
 
-    background: var(--primary-color);
+    background-color: #2563eb;
 
-    color: white;
+    color: #ffffff;
 
 }
 
 
 .btn-primary:hover {
 
-    opacity: 0.9;
+    background-color: #1d4ed8;
+
+    box-shadow: 0 10px 20px rgba(37,99,235,0.2);
 
 }
 
 
 .btn-secondary {
 
-    border: 1px solid var(--border-color);
+    background-color: transparent;
+
+    color: #2563eb;
+
+    border: 2px solid #2563eb;
 
 }
 
 
 .btn-secondary:hover {
 
-    border-color: var(--primary-color);
+    background-color: #2563eb;
 
-    color: var(--primary-color);
-
-}
-
-
-/* =========================
-   Section Backgrounds
-========================= */
-
-#about,
-#projects,
-#contact {
-
-    background: var(--section-background);
+    color: #ffffff;
 
 }
 
 
-/* =========================
-   Footer
-========================= */
+/*
+========================================
+7. General Section Styling
+========================================
+*/
 
-footer {
 
-    padding: 32px 20px;
+section {
+
+    padding: 5rem 0;
+
+}
+
+
+section h2 {
 
     text-align: center;
 
-    border-top: 1px solid var(--border-color);
+    position: relative;
 
 }
+
+
+section h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 4px;
+
+    background-color: #2563eb;
+
+    margin:
+
+        1rem auto 0;
+
+}
+
+
+section p {
+
+    max-width: 800px;
+
+    margin:
+
+        0 auto;
+
+    text-align: center;
+
+}
+
+
+/*
+========================================
+8. About Section
+========================================
+*/
+
+
+#about {
+
+    background-color: #ffffff;
+
+}
+
+
+#about p {
+
+    font-size: 1.1rem;
+
+}
+
+
+/*
+========================================
+9. Skills Section
+========================================
+*/
+
+
+#skills {
+
+    background-color: #f8fafc;
+
+}
+
+
+#skills p {
+
+    font-size: 1.1rem;
+
+    font-weight: 500;
+
+    color: #374151;
+
+}
+
+
+/*
+========================================
+10. Projects Section
+========================================
+*/
+
+
+#projects {
+
+    background-color: #ffffff;
+
+}
+
+
+#projects p {
+
+    font-size: 1.1rem;
+
+}
+
+
+/*
+========================================
+11. Experience Section
+========================================
+*/
+
+
+#experience {
+
+    background-color: #f8fafc;
+
+}
+
+
+#experience p {
+
+    font-size: 1.1rem;
+
+}
+
+
+/*
+========================================
+12. Contact Section
+========================================
+*/
+
+
+#contact {
+
+    background-color: #ffffff;
+
+}
+
+
+#contact p {
+
+    font-size: 1.1rem;
+
+}
+
+
+/*
+========================================
+13. Footer
+========================================
+*/
+
+
+footer {
+
+    background-color: #111827;
+
+    padding: 2rem 0;
+
+}
+
 
 footer p {
 
-    color: var(--secondary-text);
+    text-align: center;
 
-    font-size: 0.9rem;
+    color: #d1d5db;
+
+    font-size: 0.95rem;
 
 }
+
+
+/*
+========================================
+14. Responsive Design
+========================================
+*/
+
+
+@media screen and (max-width: 900px) {
+
+
+    .navbar {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 1.5rem 0;
+
+        gap: 1rem;
+
+    }
+
+
+    .nav-links {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 1.2rem;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        padding: 4rem 0;
+
+    }
+
+
+    h1 {
+
+        font-size: 2.8rem;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 1.3rem;
+
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+
+    .container {
+
+        width: 92%;
+
+    }
+
+
+    .nav-links {
+
+        gap: 0.8rem;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .hero-content {
+
+        text-align: center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 2.3rem;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 1.15rem;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 1rem;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .btn {
+
+        width: 100%;
+
+        max-width: 260px;
+
+        text-align: center;
+
+    }
+
+
+    section {
+
+        padding: 3.5rem 0;
+
+    }
+
+
+    section h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    section p {
+
+        font-size: 1rem;
+
+    }
+
+
+}
+
+
+
+/*
+========================================
+15. Accessibility Improvements
+========================================
+*/
+
+
+a:focus {
+
+    outline:
+
+        3px solid #93c5fd;
+
+    outline-offset:
+
+        3px;
+
+}
+
