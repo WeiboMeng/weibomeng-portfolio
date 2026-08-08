@@ -489,6 +489,66 @@ section p {
 }
 
 
+.projects-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3rem;
+
+}
+
+
+.project-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 3rem;
+
+    padding: 2.5rem;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    background-color: #ffffff;
+
+}
+
+
+.project-content {
+
+    flex: 1;
+
+}
+
+
+.project-image {
+
+    flex: 1;
+
+}
+
+
+.project-image img {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: auto;
+
+    border-radius: 12px;
+
+    object-fit: contain;
+
+}
+
 /*
 ========================================
 11. Experience Section
@@ -648,6 +708,23 @@ footer p {
     
     }
 
+
+    .project-card {
+
+        flex-direction: column;
+    
+        padding: 1.5rem;
+
+    }
+    
+    
+    .project-image img {
+    
+        max-width:100%;
+    
+    }
+
+    
 }
 
 
